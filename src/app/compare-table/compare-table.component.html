@@ -1,0 +1,51 @@
+<div class="container">
+	<table class="table table-striped text-center" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="10">
+		<thead>
+			<tr>
+				<th style="width: 12%">
+					<mfDefaultSorter by="rank">Rank</mfDefaultSorter>
+				</th>
+				<th style="width: 12%">
+					<mfDefaultSorter by="currency">Currency</mfDefaultSorter>
+				</th>
+				<th style="width: 12%">
+					<mfDefaultSorter by="price">Price</mfDefaultSorter>
+				</th>
+				<th style="width: 12%">
+					<mfDefaultSorter by="marketcap">Market Cap</mfDefaultSorter>
+				</th>
+				<th style="width: 12%">
+					<mfDefaultSorter by="volume24h">24H Volume</mfDefaultSorter>
+				</th>
+				<th style="width: 12%">
+					<mfDefaultSorter by="change1h">1H Change</mfDefaultSorter>
+				</th>
+				<th style="width: 12%">
+					<mfDefaultSorter by="change24h">24H Change</mfDefaultSorter>
+				</th>
+				<th style="width: 12%">
+					<mfDefaultSorter by="change7d">7D Change</mfDefaultSorter>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let key of mf.data">
+				<td>{{ key.rank }}</td>
+				<td>{{ key.name }}</td>
+				<td>{{ key.quotes.USD.price }}</td>
+				<td>{{ key.quotes.USD.market_cap }}</td>
+				<td>{{ key.quotes.USD.volume_24h }}</td>
+				<td>{{ key.quotes.USD.percent_change_1h }}</td>
+				<td>{{ key.quotes.USD.percent_change_24h }}</td>
+				<td>{{ key.quotes.USD.percent_change_7d }}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="4">
+					<mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
