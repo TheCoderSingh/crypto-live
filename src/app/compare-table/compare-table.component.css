@@ -1,0 +1,14 @@
+thead {
+	background-color: #175CA8;
+	color: #FFF;
+	font-family: 'Roboto', sans-serif;
+}
+
+tr, th, td, thead {
+	border: none !important;
+}
+
+th {
+	/* font-size: 14px !important; */
+	font-weight: lighter;
+}
