@@ -32,8 +32,8 @@
 			<tr *ngFor="let key of mf.data">
 				<td>{{ key.rank }}</td>
 				<td>{{ key.name }}</td>
-				<td>{{ key.quotes.USD.price }}</td>
-				<td>{{ key.quotes.USD.market_cap }}</td>
+				<td>{{ key.quotes.USD.price | currency }}</td>
+				<td>{{ key.quotes.USD.market_cap | currency }}</td>
 				<td>{{ key.quotes.USD.volume_24h }}</td>
 				<td>{{ key.quotes.USD.percent_change_1h }}</td>
 				<td>{{ key.quotes.USD.percent_change_24h }}</td>
