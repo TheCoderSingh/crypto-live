@@ -28,6 +28,6 @@ export class CompareTableComponent implements OnInit {
 					this.data = tmpArray;
 				}
 			);
-		}, 2000);
+		}, 3000);
 	}
 }
